@@ -2,8 +2,13 @@
 //registration function 
 //we wrap the function in an event listene
 //cors middleware
-const port = 3000;
-const whitelist = ["http://127.0.0.1:5500/index.html"];
+//initializing firebase with your configuratios
+firebase.initializeApp({
+  apiKey: "AIzaSyBIPuCXTPYYeSrFbYhJfRoqWkpUXz06qPw",
+  authDomain: "learningmanagementsystem-6a495.firebaseapp.com",
+  projectId: "learningmanagementsystem-6a495",
+});
+const db = firebase.firestore();
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || whitelist.indexOf(origin) !== -1) {
@@ -24,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
      //decklaring thwe variables to use 
         const formData = new FormData(registerForm);
-        //we fetch theparameters from the form
+        //we fetch the parameters from the form
         const username = formData.get('username');
         const password = formData.get('password');
         const email= formData.get('email');
