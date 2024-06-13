@@ -14,8 +14,8 @@
             <ul>
                 <li><a href = "/leaderboard">leaderboard</a></li>
                 <li><a href = "/course-content.html">Course content</a></li>
-                <li><a href = "/index.html"> Create an account</a></li>
             </ul>
+          
         </nav>
         </header>
         <main>
@@ -23,16 +23,31 @@
                 <h2> Hello, <span id = "user-fullname"></span>!</h2>
                 <p>Welcome to your personalized dashboard</p>
             </section>
-<section>
-    <h2>Your courses</h2>
-    <ul>
-        <li>Course 1</li>
-        <li>Course 2</li>
-        <li>Course 3</li>
-        <li>Course 4</li>
-        <li>Course 5</li>
-    </ul>
-</section>
+
+            <label> SELECT YOUR PREFERED COURSES</label>
+            <section>
+                <section>
+                    <h2> Select your courses</h2>
+                    <form action= "dashboard.html" class="subject" id = "subjectForm">
+                        <input type="checkbox" name="subject" value="Science">Biology<br>
+                        <input type="checkbox" name="subject" value="Science">Physics<br>
+                        <input type="checkbox" name="subject" value="Science">Mathematics<br>
+                        <input type="checkbox" name="subject" value="Science">Chemistry<br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                        
+                </section>
+                <nav class="selection">
+                  
+                <ul class=" courses">
+                    <li> <a href = "course-content.html"> Biology </a></li>
+                    <li> <a href = "course-content.html"> Physics</a></li>
+                    <li> <a href = "course-content.html"> Mathematics</a></li>
+                    <li> <a href = "course-content.html">Chemistry</a></li>
+                </ul>
+           
+                </nav>
+            </section>
         </main>
         <footer>
             <p>&copy; 2024 your LMS</p>
